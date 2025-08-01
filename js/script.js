@@ -79,8 +79,9 @@ sr.reveal('.footer-content, .footer-copy', {
     opacity: 0
 });
 
-// Initialize navbar once
+// Initialize navbar and mobile menu
 document.addEventListener('DOMContentLoaded', function() {
+    // Reveal navbar animation
     sr.reveal('.navbar', {
         origin: 'top',
         distance: '20px',
@@ -88,5 +89,41 @@ document.addEventListener('DOMContentLoaded', function() {
         delay: 100,
         cleanup: true,
         reset: false
+    });
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navList = document.querySelector('.nav-list');
+    const menuSpans = mobileMenuBtn.querySelectorAll('span');
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        navList.classList.toggle('active');
+        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+        
+        // Animate hamburger to X
+        menuSpans[0].style.transform = isMenuOpen ? 'rotate(45deg) translate(6px, 6px)' : '';
+        menuSpans[1].style.opacity = isMenuOpen ? '0' : '1';
+        menuSpans[2].style.transform = isMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : '';
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a link
+    const navLinks = navList.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (isMenuOpen) {
+                toggleMenu();
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (isMenuOpen && !navList.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            toggleMenu();
+        }
     });
 });
