@@ -25,7 +25,8 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 10;
+    z-index: 1001; /* Increased for visibility */
+    position: relative; /* Ensure stacking */
 }
 
 .mobile-menu-btn span {
@@ -39,6 +40,10 @@
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: flex;
+        z-index: 1001; /* Ensure on top of nav-list */
+        background: rgba(255,255,255,0.95); /* Optional: for visibility */
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     .nav-list {
@@ -52,12 +57,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: 5;
+        z-index: 1000; /* Below the button */
         padding: 2rem;
+        transition: opacity 0.3s, visibility 0.3s;
+        opacity: 0;
+        visibility: hidden;
     }
 
     .nav-list.active {
         display: flex;
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav-list li {
@@ -66,6 +76,20 @@
 
     .nav-list a {
         font-size: 1.4rem;
+    }
+}
+
+/* Fallback: If JS fails, show menu on mobile */
+@media (max-width: 768px) {
+    .no-js .nav-list {
+        display: flex !important;
+        position: static;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
     }
 }
 
