@@ -446,8 +446,9 @@ main {
 
 @media (max-width: 768px) {
     .highlight-list {
-        gap: 2rem;
-        padding: 1.5rem;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        justify-content: center;
     }
 
     .highlights {
