@@ -1152,15 +1152,6 @@ html, body {
   right: 0;
 }
 
-.sidebar .close-button {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  align-self: flex-end;
-  cursor: pointer;
-  margin-bottom: 1.5rem;
-}
-
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -1190,8 +1181,18 @@ html, body {
   color: #0097a7;
 }
 
+/* Hide sidebar and hamburger on desktop */
+.menu-button,
+.sidebar {
+  display: none;
+}
+
+/* Show hamburger and sidebar only on mobile */
 @media (max-width: 900px) {
   .menu-button {
     display: block;
+  }
+  .sidebar {
+    display: flex;
   }
 }
