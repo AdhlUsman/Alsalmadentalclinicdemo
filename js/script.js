@@ -128,26 +128,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Sidebar menu logic
-    // This code ensures the sidebar opens/closes as expected and closes when a link is clicked
-
+    // Hamburger toggles sidebar open/close. No X button.
     const openSidebar = document.getElementById('openSidebar');
-    const closeSidebar = document.getElementById('closeSidebar');
     const sidebarMenu = document.getElementById('sidebarMenu');
     const sidebarLinks = sidebarMenu ? sidebarMenu.querySelectorAll('a') : [];
 
-    if (openSidebar && closeSidebar && sidebarMenu) {
+    if (openSidebar && sidebarMenu) {
       openSidebar.addEventListener('click', () => {
-        sidebarMenu.classList.add('open');
+        sidebarMenu.classList.toggle('open');
       });
 
-      closeSidebar.addEventListener('click', () => {
-        sidebarMenu.classList.remove('open');
-      });
-
+      // Close sidebar when clicking outside
       window.addEventListener('click', (e) => {
-        if (sidebarMenu.classList.contains('open') &&
-            !sidebarMenu.contains(e.target) &&
-            e.target !== openSidebar) {
+        if (
+          sidebarMenu.classList.contains('open') &&
+          !sidebarMenu.contains(e.target) &&
+          e.target !== openSidebar
+        ) {
           sidebarMenu.classList.remove('open');
         }
       });
