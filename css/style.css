@@ -75,30 +75,35 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Logo styling */
 .nav-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #0097a7;
-    transition: color 0.2s;
-    line-height: 1.1;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #0097a7;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 1.2rem auto 0.5rem auto;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  text-align: center;
+  z-index: 100;
 }
 
 .nav-logo .main-text {
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .nav-logo .sub-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-top: -2px;
-    text-transform: uppercase;
-    letter-spacing: 3.5px;
-    width: 100%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: -2px;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  width: 100%;
 }
 
 .nav-logo:hover {
@@ -1119,68 +1124,6 @@ html, body {
     }
 }
 
-.menu-button {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1101;
-  display: none;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 80vw;
-  max-width: 340px;
-  height: 100vh;
-  background: #fff;
-  box-shadow: -10px 0 30px rgba(0,0,0,0.08);
-  transition: right 0.3s cubic-bezier(.4,0,.2,1);
-  z-index: 1100;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 18px 0 0 18px;
-}
-
-.sidebar.open {
-  right: 0;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.sidebar li {
-  margin-bottom: 1.2rem;
-}
-
-.sidebar a {
-  color: #222;
-  text-decoration: none;
-  font-size: 1.3rem;
-  transition: color 0.2s;
-  display: block;
-  padding: 0.2em 0;
-}
-
-.sidebar a.highlight {
-  color: #e91e63;
-  font-weight: 600;
-}
-
-.sidebar a:hover {
-  color: #0097a7;
-}
-
 /* Hide sidebar and hamburger on desktop */
 .menu-button,
 .sidebar {
@@ -1191,8 +1134,58 @@ html, body {
 @media (max-width: 900px) {
   .menu-button {
     display: block;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 9999;
+    color: #0097a7;
   }
   .sidebar {
     display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80vw;
+    max-width: 340px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+    transition: right 0.3s cubic-bezier(.4,0,.2,1);
+    z-index: 1100;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    flex-direction: column;
+    border-radius: 18px 0 0 18px;
   }
+  .sidebar.open {
+    right: 0;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .sidebar li {
+    margin-bottom: 1.2rem;
+  }
+  .sidebar a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.2s;
+    display: block;
+    padding: 0.2em 0;
+  }
+  .sidebar a:hover {
+    color: #0097a7;
+  }
+}
+
+/* Prevent body scrolling when sidebar is open */
+body.sidebar-active {
+  overflow: hidden;
 }

@@ -79,81 +79,58 @@ sr.reveal('.footer-content, .footer-copy', {
     opacity: 0
 });
 
-// Initialize navbar and mobile menu
+// Sidebar menu logic - Hamburger toggles sidebar open/close
 document.addEventListener('DOMContentLoaded', function() {
-    // Reveal navbar animation
-    sr.reveal('.navbar', {
-        origin: 'top',
-        distance: '20px',
-        duration: 1000,
-        delay: 100,
-        cleanup: true,
-        reset: false
-    });
-
-    // Mobile menu functionality
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navList = document.querySelector('.nav-list');
-    const menuSpans = mobileMenuBtn.querySelectorAll('span');
-    let isMenuOpen = false;
-
-    function toggleMenu() {
-        isMenuOpen = !isMenuOpen;
-        navList.classList.toggle('active');
-        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
-        
-        // Animate hamburger to X
-        menuSpans[0].style.transform = isMenuOpen ? 'rotate(45deg) translate(6px, 6px)' : '';
-        menuSpans[1].style.opacity = isMenuOpen ? '0' : '1';
-        menuSpans[2].style.transform = isMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : '';
-    }
-
-    mobileMenuBtn.addEventListener('click', toggleMenu);
-
-    // Close menu when clicking a link
-    const navLinks = navList.querySelectorAll('a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (isMenuOpen) {
-                toggleMenu();
-            }
-        });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (isMenuOpen && !navList.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-            toggleMenu();
-        }
-    });
-
-    // Sidebar menu logic
-    // Hamburger toggles sidebar open/close. No X button.
+    console.log('DOM loaded - initializing sidebar functionality');
+    
     const openSidebar = document.getElementById('openSidebar');
     const sidebarMenu = document.getElementById('sidebarMenu');
+    const body = document.body;
     const sidebarLinks = sidebarMenu ? sidebarMenu.querySelectorAll('a') : [];
 
+    console.log('Elements found:', { 
+        openSidebar: !!openSidebar, 
+        sidebarMenu: !!sidebarMenu, 
+        sidebarLinksCount: sidebarLinks.length 
+    });
+
     if (openSidebar && sidebarMenu) {
-      openSidebar.addEventListener('click', () => {
-        sidebarMenu.classList.toggle('open');
-      });
-
-      // Close sidebar when clicking outside
-      window.addEventListener('click', (e) => {
-        if (
-          sidebarMenu.classList.contains('open') &&
-          !sidebarMenu.contains(e.target) &&
-          e.target !== openSidebar
-        ) {
-          sidebarMenu.classList.remove('open');
-        }
-      });
-
-      // Close sidebar when any link is clicked
-      sidebarLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          sidebarMenu.classList.remove('open');
+        // Hamburger button click handler
+        openSidebar.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            sidebarMenu.classList.toggle('open');
+            body.classList.toggle('sidebar-active');
+            console.log('Hamburger clicked - Sidebar toggled. Open:', sidebarMenu.classList.contains('open'));
         });
-      });
+
+        // Close sidebar when clicking outside
+        window.addEventListener('click', function(e) {
+            if (
+                sidebarMenu.classList.contains('open') &&
+                !sidebarMenu.contains(e.target) &&
+                e.target !== openSidebar
+            ) {
+                sidebarMenu.classList.remove('open');
+                body.classList.remove('sidebar-active');
+                console.log('Sidebar closed - clicked outside');
+            }
+        });
+
+        // Close sidebar when any link is clicked
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebarMenu.classList.remove('open');
+                body.classList.remove('sidebar-active');
+                console.log('Sidebar closed - link clicked:', this.href);
+            });
+        });
+
+        console.log('Sidebar functionality initialized successfully');
+    } else {
+        console.error('Sidebar elements not found:', { 
+            openSidebar: !!openSidebar, 
+            sidebarMenu: !!sidebarMenu 
+        });
     }
 });

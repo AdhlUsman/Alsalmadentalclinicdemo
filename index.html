@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <div class="nav-logo">
+        <span class="main-text">Alsalama</span>
+        <span class="sub-text">Dental Clinic</span>
+    </div>
     <button class="menu-button" id="openSidebar">&#9776;</button>
     <nav class="sidebar" id="sidebarMenu">
       <ul>
@@ -119,26 +123,5 @@
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/script.js"></script>
-    <script>
-  const openSidebar = document.getElementById('openSidebar');
-  const closeSidebar = document.getElementById('closeSidebar');
-  const sidebarMenu = document.getElementById('sidebarMenu');
-
-  openSidebar.addEventListener('click', () => {
-    sidebarMenu.classList.add('open');
-  });
-
-  closeSidebar.addEventListener('click', () => {
-    sidebarMenu.classList.remove('open');
-  });
-
-  window.addEventListener('click', (e) => {
-    if (sidebarMenu.classList.contains('open') &&
-        !sidebarMenu.contains(e.target) &&
-        e.target !== openSidebar) {
-      sidebarMenu.classList.remove('open');
-    }
-  });
-</script>
 </body>
 </html>
