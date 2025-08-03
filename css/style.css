@@ -75,6 +75,63 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Desktop Navigation Bar */
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 2rem auto;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav li {
+  position: relative;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.desktop-nav a:hover, 
+.desktop-nav a:focus,
+.desktop-nav a.active {
+  color: #0097a7;
+}
+
+.desktop-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0097a7;
+  transition: width 0.3s;
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a:focus::after,
+.desktop-nav a.active::after {
+  width: 100%;
+}
+
 /* Logo styling */
 .nav-logo {
   display: flex;
@@ -1132,6 +1189,10 @@ html, body {
 
 /* Show hamburger and sidebar only on mobile */
 @media (max-width: 900px) {
+  .desktop-nav {
+    display: none; /* Hide desktop nav on mobile */
+  }
+  
   .menu-button {
     display: block;
     position: fixed;
