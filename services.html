@@ -194,26 +194,5 @@
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/script.js"></script>
-    <script>
-  const openSidebar = document.getElementById('openSidebar');
-  const closeSidebar = document.getElementById('closeSidebar');
-  const sidebarMenu = document.getElementById('sidebarMenu');
-
-  openSidebar.addEventListener('click', () => {
-    sidebarMenu.classList.add('open');
-  });
-
-  closeSidebar.addEventListener('click', () => {
-    sidebarMenu.classList.remove('open');
-  });
-
-  window.addEventListener('click', (e) => {
-    if (sidebarMenu.classList.contains('open') &&
-        !sidebarMenu.contains(e.target) &&
-        e.target !== openSidebar) {
-      sidebarMenu.classList.remove('open');
-    }
-  });
-</script>
 </body>
 </html>

@@ -126,4 +126,37 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleMenu();
         }
     });
+
+    // Sidebar menu logic
+    // This code ensures the sidebar opens/closes as expected and closes when a link is clicked
+
+    const openSidebar = document.getElementById('openSidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+    const sidebarMenu = document.getElementById('sidebarMenu');
+    const sidebarLinks = sidebarMenu ? sidebarMenu.querySelectorAll('a') : [];
+
+    if (openSidebar && closeSidebar && sidebarMenu) {
+      openSidebar.addEventListener('click', () => {
+        sidebarMenu.classList.add('open');
+      });
+
+      closeSidebar.addEventListener('click', () => {
+        sidebarMenu.classList.remove('open');
+      });
+
+      window.addEventListener('click', (e) => {
+        if (sidebarMenu.classList.contains('open') &&
+            !sidebarMenu.contains(e.target) &&
+            e.target !== openSidebar) {
+          sidebarMenu.classList.remove('open');
+        }
+      });
+
+      // Close sidebar when any link is clicked
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          sidebarMenu.classList.remove('open');
+        });
+      });
+    }
 });
