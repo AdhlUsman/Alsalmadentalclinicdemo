@@ -51,8 +51,8 @@ body {
 /* Logo styling */
 .nav-logo {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   text-decoration: none;
   color: #0097a7;
   font-weight: bold;
@@ -60,6 +60,16 @@ body {
   line-height: 1.1;
   text-align: left;
   z-index: 100;
+}
+
+.nav-logo-img {
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 180, 216, 0.10);
 }
 
 .nav-logo .main-text {
