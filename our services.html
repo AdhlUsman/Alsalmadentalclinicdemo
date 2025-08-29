@@ -10,205 +10,387 @@
   <meta name="description" content="Explore all dental services at Alsalama Dental Clinic including cleaning, root canals, braces, whitening, pediatric care, implants and more." />
 </head>
 <body>
-  <div class="header-container">
-    <a class="nav-logo" href="index.html">
-      <img src="Images/logo.png" alt="Alsalama Dental Clinic Logo" class="nav-logo-img" />
-      <div>
-        <span class="main-text">Alsalama</span><br/>
-        <span class="sub-text">Dental Clinic</span>
-      </div>
-    </a>
+  <div class="page-wrapper">
+    <div class="header-container">
+      <a class="nav-logo" href="index.html">
+        <img src="Images/logo.png" alt="Alsalama Dental Clinic Logo" class="nav-logo-img" />
+        <div class="logo-text-container">
+          <span class="main-text">Alsalama</span><br/>
+          <span class="sub-text">Dental Clinic</span>
+        </div>
+      </a>
 
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="doctors.html">Doctors</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="our services.html">Our Services</a></li>
-      </ul>
-    </nav>
-  </div>
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="doctors.html">Doctors</a></li>
+          <li class="nav-item"><a href="services.html">Services</a></li>
+          <li class="nav-item"><a href="our services.html">Our Services</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <button class="menu-button" id="openSidebar" title="Open Menu">&#9776;</button>
-  <nav class="sidebar" id="sidebarMenu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="doctors.html">Doctors</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="our services.html">Our Services</a></li>
-    </ul>
-  </nav>
-  <div class="scroll-progress"></div>
+    <div class="mobile-nav-container">
+      <button class="menu-button" id="openSidebar" title="Open Menu">&#9776;</button>
+      <nav class="sidebar" id="sidebarMenu">
+        <ul class="sidebar-list">
+          <li class="sidebar-item"><a href="index.html">Home</a></li>
+          <li class="sidebar-item"><a href="about.html">About</a></li>
+          <li class="sidebar-item"><a href="doctors.html">Doctors</a></li>
+          <li class="sidebar-item"><a href="services.html">Services</a></li>
+          <li class="sidebar-item"><a href="our services.html">Our Services</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="scroll-progress"></div>
 
-  <main>
-    <header class="page-header">
-      <h1>Our Treatment</h1>
-      <p>A glimpse of smiles transformed by our expert care.</p>
-    </header>
+    <main class="main-content">
+      <header class="page-header">
+        <div class="header-content">
+          <h1 class="page-title">Our Treatment</h1>
+          <p class="page-subtitle">A glimpse of smiles transformed by our expert care.</p>
+        </div>
+      </header>
 
-    <section class="services-section fade-in-section">
-      <div class="parallax-bg"></div>
-      <div class="services-list">
-        <div class="service-card fade-in-section">
-          <img src="Images/orthopedic-appliances(1).png" alt="Orthopedic appliances" class="service-icon" />
-          <h3>Orthopedic appliances</h3>
-          <p>Growth‑modifying devices that guide jaw development to correct bite and improve facial balance.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/orthopedic-appliances (2).png" alt="Orthopedic appliances " class="service-icon" />
-          <h3>Orthopedic appliances </h3>
-          <p>Functional headgear/expanders used during childhood to broaden arches and harmonize upper–lower jaws.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/orthopedic-appliances (3).png" alt="Orthopedic appliances" class="service-icon" />
-          <h3>Orthopedic appliances</h3>
-          <p>Growth‑modifying devices that guide jaw development to correct bite and improve facial balance.</p>
-        </div>
-
-        <div class="service-card fade-in-section">
-          <img src="Images/orthopedic-appliances (5).png" alt="Habit breaking appliance" class="service-icon" />
-          <h3>Habit breaking appliance</h3>
-          <p>Helps stop thumb‑sucking/tongue‑thrust habits protecting developing jaws.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/orthopedic-appliances (4).png" alt="Space maintainer" class="service-icon" />
-          <h3>Space maintainer</h3>
-          <p>Preserves room for erupting teeth after early tooth loss in children.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/orthopedic-appliances (3).png" alt="Retainers" class="service-icon" />
-          <h3>Retainers</h3>
-          <p>Maintains tooth alignment and stabilizes results after orthodontic care.</p>
-        </div>
-
-        <div class="service-card fade-in-section">
-          <img src="Images/Anterior crossbite correction (2).png" alt="Anterior crossbite correction" class="service-icon" />
-          <h3>Anterior crossbite correction</h3>
-          <p>Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/Anterior crossbite correction (3).png" alt="Anterior crossbite correction" class="service-icon" />
-          <h3>Anterior crossbite correction</h3>
-          <p>Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
-        </div>
+      <section class="services-section fade-in-section">
+        <div class="parallax-bg"></div>
+        <div class="services-container">
+          <div class="services-list">
             <div class="service-card fade-in-section">
-            <img src="Images/Anterior crossbite correction (4).png" alt="Anterior crossbite correction" class="service-icon" />
-          <h3>Anterior crossbite correction</h3>
-          <p>Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+              <div class="service-image-container">
+                <img src="Images/orthopedic-appliances(1).png" alt="Orthopedic appliances" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Orthopedic appliances</h3>
+                <p class="service-description">Growth‑modifying devices that guide jaw development to correct bite and improve facial balance.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/orthopedic-appliances (2).png" alt="Orthopedic appliances " class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Orthopedic appliances </h3>
+                <p class="service-description">Functional headgear/expanders used during childhood to broaden arches and harmonize upper–lower jaws.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/orthopedic-appliances (3).png" alt="Orthopedic appliances" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Orthopedic appliances</h3>
+                <p class="service-description">Growth‑modifying devices that guide jaw development to correct bite and improve facial balance.</p>
+              </div>
+            </div>
+
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/orthopedic-appliances (4).png" alt="Habit breaking appliance" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Habit breaking appliance</h3>
+                <p class="service-description">Helps stop thumb‑sucking/tongue‑thrust habits protecting developing jaws.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/orthopedic-appliances (5).png" alt="Space maintainer" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Space maintainer</h3>
+                <p class="service-description">Preserves room for erupting teeth after early tooth loss in children.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Anterior crossbite correction (1).png" alt="Anterior crossbite correction" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Anterior crossbite correction</h3>
+                <p class="service-description">Maintains tooth alignment and stabilizes results after orthodontic care.</p>
+              </div>
+            </div>
+
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Anterior crossbite correction (2).png" alt="Anterior crossbite correction" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Anterior crossbite correction</h3>
+                <p class="service-description">Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Anterior crossbite correction (3).png" alt="Anterior crossbite correction" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Anterior crossbite correction</h3>
+                <p class="service-description">Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Anterior crossbite correction (4).png" alt="Anterior crossbite correction" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Anterior crossbite correction</h3>
+                <p class="service-description">Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+              </div>
+            </div>
+
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Fixed orthodontic treatment (1).png" alt="Fixed orthodontic treatment" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Fixed orthodontic treatment</h3>
+                <p class="service-description">Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Midline diastema closure (1).png" alt="Midline diastema closure" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Midline diastema closure</h3>
+                <p class="service-description">Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Midline diastema closure (2).png" alt="Midline diastema closure" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Midline diastema closure</h3>
+                <p class="service-description">Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Midline diastema closure (3).png" alt="Midline diastema closure" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Midline diastema closure</h3>
+                <p class="service-description">Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Aesthetic crowns (1).png" alt="Aesthetic crowns" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Aesthetic crowns</h3>
+                <p class="service-description">Aesthetic crowns are a type of dental restoration that are used to improve the appearance of teeth. They are made of porcelain or ceramic and are bonded to the tooth.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Complete Denture  (1).png" alt="Complete Denture" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Complete Denture</h3>
+                <p class="service-description">A complete denture is a removable replacement for all of the teeth in the upper or lower jaw. It is made of acrylic resin and is held in place by suction or adhesive.</p>
+              </div>
+            </div>
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Complete Denture (2).png" alt="Complete Denture" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Complete Denture</h3>
+                <p class="service-description">A complete denture is a removable replacement for all of the teeth in the upper or lower jaw. It is made of acrylic resin and is held in place by suction or adhesive.</p>
+              </div>
+            </div>
+            
+            <div class="service-card fade-in-section">
+              <div class="service-image-container">
+                <img src="Images/Anterior Space closure (1).png" alt="Anterior Space closure" class="service-icon" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Anterior Space closure</h3>
+                <p class="service-description">A procedure to close gaps between the front teeth for a more even smile.</p>
+              </div>
+            </div>
+            
+                         <div class="service-card fade-in-section">
+               <div class="service-image-container">
+                 <img src="Images/Dental Aligners (1).png" alt="Dental Aligners" class="service-icon" />
+               </div>
+               <div class="service-content">
+                 <h3 class="service-title">Dental Aligners</h3>
+                 <p class="service-description">Clear, removable aligners that gradually straighten teeth for a beautiful smile without traditional braces.</p>
+               </div>
+             </div>
+             
+             <div class="service-card fade-in-section">
+               <div class="service-image-container">
+                 <img src="Images/Smile designing (1).png" alt="Smile designing" class="service-icon" />
+               </div>
+               <div class="service-content">
+                 <h3 class="service-title">Smile designing</h3>
+                 <p class="service-description">Professional teeth whitening treatments to brighten your smile and remove stubborn stains for a more confident appearance.</p>
+               </div>
+             </div>
+             
+                           <div class="service-card fade-in-section">
+                <div class="service-image-container">
+                  <img src="Images/Smile designing (2).png" alt="Smile designing" class="service-icon" />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">Smile designing</h3>
+                  <p class="service-description">Comprehensive smile makeover treatments including veneers, bonding, and contouring for a perfectly aligned and beautiful smile.</p>
+                </div>
+              </div>
+              
+              <div class="service-card fade-in-section">
+                <div class="service-image-container">
+                  <img src="Images/Smile designing (3).png" alt="Smile designing" class="service-icon" />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">Smile designing</h3>
+                  <p class="service-description">Advanced cosmetic dentistry procedures to enhance tooth shape, size, and color for a stunning, natural-looking smile transformation.</p>
+                </div>
+              </div>
+              
+              <div class="service-card fade-in-section">
+                <div class="service-image-container">
+                  <img src="Images/Smile designing (4).png" alt="Smile designing" class="service-icon" />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">Smile designing</h3>
+                  <p class="service-description">Personalized smile analysis and treatment planning to achieve the perfect balance of aesthetics and functionality for your unique facial features.</p>
+                </div>
+              </div>
+              
+              <div class="service-card fade-in-section">
+                <div class="service-image-container">
+                  <img src="Images/Reverse pull Headgear (1).png" alt="Reverse pull Headgear" class="service-icon" />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">Reverse pull Headgear</h3>
+                  <p class="service-description">Orthodontic appliance that applies forward force to the upper jaw to correct Class III malocclusion and improve facial profile.</p>
+                </div>
+              </div>
+       </section>
+    </main>
+    
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="footer-contact">
+            <div class="contact-item">
+              <a href="https://www.google.com/maps/place/ALSALAMA+DENTAL+CLINIC/@10.9985329,75.988221,707m/data=!3m1!1e3!4m6!3m5!1s0x3ba7b358d951863f:0x571d25b42afa067b!8m2!3d10.9985037!4d75.9902969!16s%2Fg%2F11bbrkbvqs?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+                <i class="fas fa-map-marker-alt"></i> 
+                <span class="contact-text">Mythri Road Junction, Changuvetty, Kottakkal - 676 503</span>
+              </a>
+            </div>
+            <div class="contact-item">
+              <a href="tel:8606124541">
+                <i class="fas fa-phone"></i> 
+                <span class="contact-text">8606124 541</span>
+              </a>
+            </div>
+            <div class="contact-item">
+              <a href="mailto:alasalamden@gmail.com">
+                <i class="fas fa-envelope"></i> 
+                <span class="contact-text">alasalamden@gmail.com</span>
+              </a>
+            </div>
+          </div>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+          </div>
         </div>
 
-        <div class="service-card fade-in-section">
-          <img src="Images/Fixed orthodontic treatment (1).png" alt="Fixed orthodontic treatment" class="service-icon" />
-          <h3>Fixed orthodontic treatment</h3>
-          <p>Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
+        <div class="footer-section">
+          <h3 class="footer-heading">Useful Links</h3>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="doctors.html" class="footer-link">Doctors</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="our services.html" class="footer-link">Our Services</a>
+          </div>
         </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/Midline diastema closure (1).png" alt="Midline diastema closure" class="service-icon" />
-          <h3>Midline diastema closure</h3>
-          <p>Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/Midline diastema closure (2).png" alt="Midline diastema closure" class="service-icon" />
-          <h3>Midline diastema closure</h3>
-          <p>Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/Midline diastema closure (3).png" alt="Midline diastema closure" class="service-icon" />
-          <h3>Midline diastema closure</h3>
-          <p>Orthodontic treatment to correct the misalignment of the upper and lower teeth.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/Aesthetic crowns (1).png" alt="Aesthetic crowns" class="service-icon" />
-          <h3>Aesthetic crowns</h3>
-          <p>Aesthetic crowns are a type of dental restoration that are used to improve the appearance of teeth. They are made of porcelain or ceramic and are bonded to the tooth.</p>
-        </div>
-        <div class="service-card fade-in-section">
-          <img src="Images/Complete Denture  (1).png" alt="Complete Denture" class="service-icon" />
-          <h3>Complete Denture</h3>
-          <p>A complete denture is a removable replacement for all of the teeth in the upper or lower jaw. It is made of acrylic resin and is held in place by suction or adhesive.</p>
-        </div>
-        
-      </div>
-    </section>
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <div class="footer-contact">
-          <a href="https://www.google.com/maps/place/ALSALAMA+DENTAL+CLINIC/@10.9985329,75.988221,707m/data=!3m1!1e3!4m6!3m5!1s0x3ba7b358d951863f:0x571d25b42afa067b!8m2!3d10.9985037!4d75.9902969!16s%2Fg%2F11bbrkbvqs?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> Mythri Road Junction, Changuvetty, Kottakkal - 676 503</a>
-          <a href="tel:8606124541"><i class="fas fa-phone"></i> 8606124 541</a>
-          <a href="mailto:alasalamden@gmail.com"><i class="fas fa-envelope"></i> alasalamden@gmail.com</a>
-        </div>
-        <div class="social-icons">
-          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+
+        <div class="footer-section">
+          <h3 class="footer-heading">Working Hours</h3>
+          <div class="working-hours-container">
+            <table class="working-hours">
+              <thead class="table-header">
+                <tr class="header-row">
+                  <th class="header-cell">Days</th>
+                  <th class="header-cell">Morning</th>
+                  <th class="header-cell">Evening</th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr class="table-row">
+                  <td class="day-cell">Monday</td>
+                  <td class="morning">10:00 am to 01:30 pm</td>
+                  <td class="evening">03:00 pm to 07:00 pm</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="day-cell">Tuesday</td>
+                  <td class="morning">10:00 am to 01:30 pm</td>
+                  <td class="evening">03:00 pm to 07:00 pm</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="day-cell">Wednesday</td>
+                  <td class="morning">10:00 am to 01:30 pm</td>
+                  <td class="evening">03:00 pm to 07:00 pm</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="day-cell">Thursday</td>
+                  <td class="morning">10:00 am to 01:30 pm</td>
+                  <td class="evening">03:00 pm to 07:00 pm</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="day-cell">Friday</td>
+                  <td class="closed">-------------------------</td>
+                  <td class="evening">03:00 pm to 07:00 pm</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="day-cell">Saturday</td>
+                  <td class="morning">10:00 am to 01:30 pm</td>
+                  <td class="evening">03:00 pm to 07:00 pm</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="day-cell">Sunday</td>
+                  <td class="holiday">HOLIDAY</td>
+                  <td class="holiday">HOLIDAY</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
-      <div class="footer-section">
-        <h3>Useful Links</h3>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="doctors.html">Doctors</a>
-          <a href="services.html">Services</a>
+      <div class="footer-bottom">
+        <div class="copyright-container">
+          <p class="copyright-text">Copyright ©2025 Alsalama Dental Clinic. All Rights Reserved</p>
         </div>
       </div>
-
-      <div class="footer-section">
-        <h3>Working Hours</h3>
-        <table class="working-hours">
-          <tr>
-            <th>Days</th>
-            <th>Morning</th>
-            <th>Evening</th>
-          </tr>
-          <tr>
-            <td>Monday</td>
-            <td class="morning">10:00 am to 01:30 pm</td>
-            <td class="evening">03:00 pm to 07:00 pm</td>
-          </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td class="morning">10:00 am to 01:30 pm</td>
-            <td class="evening">03:00 pm to 07:00 pm</td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td class="morning">10:00 am to 01:30 pm</td>
-            <td class="evening">03:00 pm to 07:00 pm</td>
-          </tr>
-          <tr>
-            <td>Thursday</td>
-            <td class="morning">10:00 am to 01:30 pm</td>
-            <td class="evening">03:00 pm to 07:00 pm</td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td class="closed">-------------------------</td>
-            <td class="evening">03:00 pm to 07:00 pm</td>
-          </tr>
-          <tr>
-            <td>Saturday</td>
-            <td class="morning">10:00 am to 01:30 pm</td>
-            <td class="evening">03:00 pm to 07:00 pm</td>
-          </tr>
-          <tr>
-            <td>Sunday</td>
-            <td class="holiday">HOLIDAY</td>
-            <td class="holiday">HOLIDAY</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>Copyright ©2025 Alsalama Dental Clinic. All Rights Reserved</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="js/script.js"></script>

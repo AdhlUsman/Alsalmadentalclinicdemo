@@ -453,12 +453,12 @@ main {
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.6fr 1fr 1.4fr;
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
 .footer-section {
@@ -1201,4 +1201,13 @@ html, body {
 /* Prevent body scrolling when sidebar is open */
 body.sidebar-active {
   overflow: hidden;
+}
+
+/* Desktop Footer Layout Override to ensure visibility */
+@media (min-width: 1025px) {
+    .footer-container {
+        max-width: 100%;
+        grid-template-columns: 1.6fr 1fr 1.4fr;
+        padding: 0 3rem;
+    }
 }
