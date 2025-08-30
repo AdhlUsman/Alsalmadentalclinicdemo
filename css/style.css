@@ -576,10 +576,24 @@ main {
     transition: all 0.2s;
 }
 
+/* Social icon hover brand colors - each icon shows its own color only */
 .social-icon:hover {
-    background: #b2ebf2;
-    color: #0097a7;
-    border-color: #b2ebf2;
+    border-color: transparent;
+}
+.social-icon:hover .fa-facebook-f {
+    color: #fff;
+}
+.social-icon.facebook:hover {
+    background: #3b5998;
+}
+.social-icon.twitter:hover {
+    background: #1da1f2;
+}
+.social-icon.instagram:hover {
+    background: linear-gradient(135deg, #e4405f 0%, #8a3ab9 100%) !important;
+}
+.social-icon.googleplus:hover {
+    background: #db4437;
 }
 
 .footer-bottom {
