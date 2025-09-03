@@ -589,6 +589,29 @@ main {
 .social-icon.twitter:hover {
     background: #1da1f2;
 }
+.social-icon.x:hover {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    border-color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.social-icon.x:hover .fa-x-twitter {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+.social-icon.x {
+    background: linear-gradient(135deg, #0097A7 0%, #0097A7 100%);
+    border: 1px solid #e0f7fa;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-icon.x .fa-x-twitter {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
 .social-icon.instagram:hover {
     background: linear-gradient(135deg, #e4405f 0%, #8a3ab9 100%) !important;
 }
